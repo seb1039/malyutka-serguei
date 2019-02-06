@@ -1,0 +1,55 @@
+V "GNAT Lib v2018"
+A -O0
+A -gnatA
+A -gnat12
+A -g
+A -gnatQ
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U display%s		display.ads		33069a55 EE OO PK
+Z system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20180525052300 76789da1 ada%s
+D a-unccon.ads		20180525052301 0e9b276f ada.unchecked_conversion%s
+D display.ads		20190115134957 33069a55 display%s
+D system.ads		20180525052301 4635ec04 system%s
+D s-exctab.ads		20180525052301 54135002 system.exception_table%s
+D s-stalib.ads		20180525052301 09bd3940 system.standard_library%s
+X 3 display.ads
+20K9*Display 55l5 55e12
+22M9*Color_Component_T 25r11 26r11 27r11 28r11
+24R9*RGBA_T 29e15 31r18 32r12 33r12 34r11 35r12 36r10 37r11 38r14 39r13 40r11
+25m7*R{22M9} 31m30 32m24 33m24 34m23 35m24 36m22 37m23 38m26 39m25 40m23
+26m7*G{22M9} 31m38 32m32 33m34 34m31 35m32 36m32 37m31 38m36 39m35 40m33
+27m7*B{22M9} 31m46 32m40 33m44 34m39 35m42 36m40 37m41 38m44 39m45 40m43
+28m7*A{22M9} 31m54 32m48 33m54 34m49 35m50 36m48 37m51 38m54 39m53 40m53
+31r4*Transparent{24R9}
+32r4*Black{24R9}
+33r4*White{24R9}
+34r4*Blue{24R9}
+35r4*Green{24R9}
+36r4*Red{24R9}
+37r4*Cyan{24R9}
+38r4*Magenta{24R9}
+39r4*Yellow{24R9}
+40r4*Gray{24R9}
+43X4*Display_Error
+45E9*Button_Type 45e37 49r16
+45n25*Left{45E9}
+45n31*Right{45E9} 52r74
+47R9*Mouse_Position 50e14 52r33
+48f7*X{float}
+48f10*Y{float}
+49e7*Button{45E9}
+52r4*No_Mouse_Position{47R9}
+
