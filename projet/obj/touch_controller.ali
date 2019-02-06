@@ -1,0 +1,79 @@
+V "GNAT Lib v2018"
+A -O0
+A -gnatA
+A --RTS=C:\gnat\2018-arm-elf\arm-eabi\lib\gnat\ravenscar-sfp-stm32f429disco\
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -gnat12
+A -g
+A -gnatQ
+P CE DB LC TF  NO ZX
+
+RN
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASKING
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+RV MAX_TASKS=1
+
+U touch_controller%b	touch_controller.adb	4c15f3dd OO SE PK IL
+W display%s		display.ads		display.ali
+W display.basic%s	display-basic.adb	display-basic.ali
+
+D ada.ads		20180524194940 76789da1 ada%s
+D a-unccon.ads		20180524194940 0e9b276f ada.unchecked_conversion%s
+D display.ads		20190115134958 33069a55 display%s
+D display-basic.ads	20190115134958 73a9194a display.basic%s
+D interfac.ads		20180524194940 5ab55268 interfaces%s
+D i-stm32.ads		20180524194940 2ad0960b interfaces.stm32%s
+D i-stm32-pwr.ads	20180524194940 4a098e84 interfaces.stm32.pwr%s
+D system.ads		20180524194940 aa7dab5a system%s
+D s-bb.ads		20180524194940 09e072ae system.bb%s
+D s-bbbopa.ads		20180524194940 5e9af419 system.bb.board_parameters%s
+D s-bbbosu.ads		20180524194940 0f820a2a system.bb.board_support%s
+D s-bbcppr.ads		20180524194940 bcfa73ad system.bb.cpu_primitives%s
+D s-bbinte.ads		20180524194940 c88d39da system.bb.interrupts%s
+D s-bbmcpa.ads		20180524194940 b5961a30 system.bb.mcu_parameters%s
+D s-bbpara.ads		20180524194940 431abc17 system.bb.parameters%s
+D s-bbthre.ads		20180524194940 c94b446f system.bb.threads%s
+D s-bbthqu.ads		20180524194940 db3cad46 system.bb.threads.queues%s
+D s-bbtime.ads		20180524194940 ad086247 system.bb.time%s
+D s-multip.ads		20180524194940 f33e0e35 system.multiprocessors%s
+D s-osinte.ads		20180524194940 229b14dd system.os_interface%s
+D s-parame.ads		20180524194940 d106111e system.parameters%s
+D s-secsta.ads		20180524194940 56a2861c system.secondary_stack%s
+D s-stm32.ads		20180524194940 e898dba2 system.stm32%s
+D s-stoele.ads		20180524194940 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20180524194940 801abd01 system.task_info%s
+D s-taspri.ads		20180524194940 351848fa system.task_primitives%s
+D s-taskin.ads		20180524194940 39441e76 system.tasking%s
+D s-tasres.ads		20180524194940 0c8ef6fb system.tasking.restricted%s
+D s-tarest.ads		20180524194940 c88b6d9a system.tasking.restricted.stages%s
+D s-unstyp.ads		20180524194940 34867c83 system.unsigned_types%s
+D touch_controller.ads	20190205142402 ad91dbdd touch_controller%s
+D touch_controller.adb	20190205142402 922d314a touch_controller%b
+X 3 display.ads
+20K9*Display 55e12 32|1r6 1r25
+X 4 display-basic.ads
+20K17*Basic 113e18 32|1w14 1r33
+50R9*Cursor_T 53e14 32|6r19
+52b7*Pressed{boolean} 32|9r20
+56U14*Draw_Sphere 32|10s10
+95V13*Get_Cursor_Status{50R9} 32|6s31
+X 22 s-secsta.ads
+46P9*SS_Stack_Ptr(43R9)
+X 27 s-taskin.ads
+355V13*Get_Sec_Stack{22|46P9} 356i<c,__gnat_get_secondary_stack>22
+X 29 s-tarest.ads
+232U14*Activate_All_Tasks_Sequential 233i<c,__gnat_activate_all_tasks>22
+X 31 touch_controller.ads
+1K9*touch_controller 6l5 6e21 32|3b14 17l5 17t21
+3t9*touch_monitor 32|5b14 15l8 15t21
+X 32 touch_controller.adb
+6r7 My_Cursor{4|50R9} 9r10
+

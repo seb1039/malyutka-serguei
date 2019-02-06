@@ -1,0 +1,3 @@
+touch_controller.adb:10:34: "Canvas" is undefined
+touch_controller.adb:13:34: "Blue" is not visible
+touch_controller.adb:13:34: non-visible declaration at display.ads:34

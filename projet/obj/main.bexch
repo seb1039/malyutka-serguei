@@ -1,0 +1,46 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\projet\simple.gpr
+20190131153900
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\stm32.gpr
+20190115134958
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\gnat_sdl\gnat_sdl.gpr
+20190115134958
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\game_support.gpr
+20190116140454
+[BOUND OBJECT FILES]
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\obj\display.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\obj\stm32f4.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\obj\stm32f4-dma.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\obj\stm32f4-fmc.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\obj\stm32f4-rcc.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\obj\stm32f4-syscfg.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\obj\stm32f4-gpio.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\obj\stm32f4-i2c.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\obj\stm32f4-spi.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\obj\stm32f4-timers.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\obj\stm32f4-usarts.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\obj\stm32f429_discovery.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\obj\stm32f4-sdram.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\obj\stm32f4-lcd.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\obj\stm32f4-touch_panel.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\obj\screen_interface.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\obj\fonts.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\obj\display-basic.o
+C:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\projet\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\projet\obj\
+-LC:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\projet\obj\
+-LC:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\obj\
+-LC:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\gnat_sdl\obj\
+-LC:\Users\Milie\Desktop\EIDD\3A\TempsReelADA\base\game_support\stm32f4\obj\
+-LC:\gnat\2018-arm-elf\arm-eabi\lib\gnat\ravenscar-sfp-stm32f429disco\adalib\
+-static
+-static-libgcc
+C:\gnat\2018-arm-elf\arm-eabi\lib\gnat\ravenscar-sfp-stm32f429disco\adalib\libgnarl.a
+C:\gnat\2018-arm-elf\arm-eabi\lib\gnat\ravenscar-sfp-stm32f429disco\adalib\libgnat.a
