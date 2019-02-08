@@ -1,10 +1,23 @@
+with Display.Basic; use Display.Basic;
+with Display; use Display;
 
 package Affichage is
    
+   --
+   -- NOTE AU LECTEUR DE CE COMMENTAIRE : Il faut qu'on ait un package qui
+   -- initialise la partie d'un point de vue moteur et graphique.
+   -- En faire un qui lancerait les deux?
+   --   
+   
    subtype Score is Natural;
+   My_Score : Score := 0;
+     
    subtype Valeur is Natural;
+   
    type Coord is range 1 .. 4;
-      
+   subtype Col is Coord;
+   subtype Lin is Coord;
+   
    type Position is record
       X : Coord;
       Y : Coord;
@@ -14,11 +27,8 @@ package Affichage is
    -- c'est qu'elle est vide.
    type Case_T is record
       Val : Valeur := 1;
-      Pos : Position;
+      Coul : RGBA_T;
    end record;
-   
-   -- type Col is array (Coord) of Case_T;
-   -- type Lin is array (Coord) of Case_T;
    
    type Grill_Index is range 1 .. Coord'Last;
    
@@ -33,7 +43,7 @@ package Affichage is
    -- |1,4|2,4|3,4|4,4|
    -- +---+---+---+---+
    
-   type Grill is array(Position) of Case_T;
+   type Grill is array(Col,Lin) of Case_T;
    
    -- My_Grill est la grille qu'on devrait utiliser
    My_Grill : Grill;
@@ -47,13 +57,13 @@ package Affichage is
 private
    
    --Sert a  la Mise a  jour du score
-   procedure Maj_Score; 
-   
-   --Sert a  la Mise a  jour du score affiché
-   procedure Maj_Score_Affiche;
+   procedure Maj_Score(val : Valeur); 
    
    --Sert a  la Mise a  jour de la grille avant ajout d'une case
-   procedure Maj_Grille;
+   procedure Maj_Grille(Dir : Direction);
+   
+   --Sert a  la Mise a  jour de la couleur d'une case
+   procedure Maj_Couleur(pos_ancienne, pos_nouvelle : Position); 
    
    --Sert a  l'ajout d'une case sur la grille
    procedure Ajout_Case;
@@ -66,6 +76,6 @@ private
    procedure Decalage(Pos : Position; Dir : Direction);
 
    
-end package;
+end Affichage;
 
   
