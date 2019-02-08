@@ -1,7 +1,8 @@
 
 package Affichage is
-        
-   subtype Score is Integer;
+   
+   subtype Score is Natural;
+   subtype Valeur is Natural;
    type Coord is range 1 .. 4;
       
    type Position is record
@@ -9,8 +10,10 @@ package Affichage is
       Y : Coord;
    end record;
    
+   -- Par défaut, une case à pour valeur 1. Ainsi, si une case a pour valeur 1,
+   -- c'est qu'elle est vide.
    type Case_T is record
-      Value : Score;
+      Val : Valeur := 1;
       Pos : Position;
    end record;
    
@@ -19,36 +22,48 @@ package Affichage is
    
    type Grill_Index is range 1 .. Coord'Last;
    
+
+   -- +---+---+---+---+
+   -- |1,1|2,1|3,1|4,1|
+   -- +---+---+---+---+
+   -- |1,2|2,2|3,2|4,2|
+   -- +---+---+---+---+
+   -- |1,3|2,3|3,3|4,3|
+   -- +---+---+---+---+
+   -- |1,4|2,4|3,4|4,4|
+   -- +---+---+---+---+
+   
    type Grill is array(Position) of Case_T;
    
    -- My_Grill est la grille qu'on devrait utiliser
    My_Grill : Grill;
    
+   -- La Direction est la direction vers laquelle on glisse
    type Direction is (Haut, Bas, Gauche, Droite);
       
-   --ProcÃ©dure Ã  appeler 
+   --Procédure a  appeler 
    procedure Coup_Joue(Dir : Direction);
    
 private
    
-   --Sert Ã  la Mise Ã  jour du score
+   --Sert a  la Mise a  jour du score
    procedure Maj_Score; 
    
-   --Sert Ã  la Mise Ã  jour du score affichÃ©
+   --Sert a  la Mise a  jour du score affiché
    procedure Maj_Score_Affiche;
    
-   --Sert Ã  la Mise Ã  jour de la grille avant ajout d'une case
+   --Sert a  la Mise a  jour de la grille avant ajout d'une case
    procedure Maj_Grille;
    
-   --Sert Ã  l'ajout d'une case sur la grille
+   --Sert a  l'ajout d'une case sur la grille
    procedure Ajout_Case;
    
-   --Sera appelÃ© par Ajout_Case
-   --Retourne vrai si la case dont la coordonnÃ©eindiquÃ©e est libre
-   function Est_Libre(Coo : Coord) return Boolean;
+   --Sera appelé par Ajout_Case
+   --Retourne vrai si la case dont la position indiquée est libre
+   function Est_Libre(Pos : Position) return Boolean;
    
-   --Sert Ã  dÃ©caler une cell
-   procedure Decalage(Coo : Coord; Dir : Direction);
+   --Sert a  décaler une cell
+   procedure Decalage(Pos : Position; Dir : Direction);
 
    
 end package;
