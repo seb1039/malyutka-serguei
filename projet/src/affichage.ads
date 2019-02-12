@@ -1,12 +1,16 @@
 with Display.Basic; use Display.Basic;
 with Display; use Display;
+with STM32.RNG.Interrupts; use STM32.RNG.Interrupts;
+with HAL; use HAL;
 
 package Affichage is
    
    --
-   -- NOTE AU LECTEUR DE CE COMMENTAIRE : Il faut qu'on ait un package qui
-   -- initialise la partie d'un point de vue moteur et graphique.
-   -- En faire un qui lancerait les deux?
+   -- NOTE AU LECTEUR DE CE COMMENTAIRE :
+   -- 1) Il faut qu'on ait un package qui initialise la partie d'un point
+   -- de vue moteur et graphique. En faire un qui lancerait les deux?
+   -- 2) Il faut créer une tâche qui lance ce package et qui utilise la
+   -- fonction Est_Finie
    --   
    
    subtype Score is Natural;
@@ -70,10 +74,14 @@ private
    
    --Sera appelé par Ajout_Case
    --Retourne vrai si la case dont la position indiquée est libre
-   function Est_Libre(Pos : Position) return Boolean;
+   function Est_Libre(co : Col; li : Lin) return Boolean;
+   
+   --Sera appelé par Ajout_Case
+   --Retourne vrai si la grille est pleine
+   function Est_Finie return Boolean;
    
    --Sert a  décaler une cell
-   procedure Decalage(Pos : Position; Dir : Direction);
+   procedure Decalage(Co : Col; Li : Lin; Dir : Direction);
 
    
 end Affichage;
