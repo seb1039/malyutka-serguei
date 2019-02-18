@@ -11,6 +11,7 @@ package Affichage is
    -- de vue moteur et graphique. En faire un qui lancerait les deux?
    -- 2) Il faut créer une tâche qui lance ce package et qui utilise la
    -- fonction Est_Finie
+   -- 3) Il faudrait qu'on crée des couleurs prédéfinies pour les 
    --   
    
    subtype Score is Natural;
@@ -58,6 +59,10 @@ package Affichage is
    --Procédure a  appeler 
    procedure Coup_Joue(Dir : Direction);
    
+   
+   --Sert a  l'ajout d'une case sur la grille
+   procedure Ajout_Case;
+   
 private
    
    --Sert a  la Mise a  jour du score
@@ -68,9 +73,6 @@ private
    
    --Sert a  la Mise a  jour de la couleur d'une case
    procedure Maj_Couleur(pos_ancienne, pos_nouvelle : Position); 
-   
-   --Sert a  l'ajout d'une case sur la grille
-   procedure Ajout_Case;
    
    --Sera appelé par Ajout_Case
    --Retourne vrai si la case dont la position indiquée est libre
