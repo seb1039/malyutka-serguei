@@ -50,15 +50,19 @@ package Affichage is
    
    type Grill is array(Col,Lin) of Case_T;
    
+   -- type Grill_A is access Grill;
+   
    -- My_Grill est la grille qu'on devrait utiliser
    My_Grill : Grill;
    
    -- La Direction est la direction vers laquelle on glisse
    type Direction is (Haut, Bas, Gauche, Droite);
+   
+   -- Initialise la Partie
+   procedure Init_Partie;
       
    --Procédure a  appeler 
    procedure Coup_Joue(Dir : Direction);
-   
    
    --Sert a  l'ajout d'une case sur la grille
    procedure Ajout_Case;
@@ -85,6 +89,8 @@ private
    --Sert a  décaler une cell
    procedure Decalage(Co : Col; Li : Lin; Dir : Direction);
 
+   --Réinitialise la grille
+   procedure Grill_Reset;
    
 end Affichage;
 

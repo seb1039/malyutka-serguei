@@ -19,10 +19,4 @@ package body Partie is
       end loop;
    end Touch_Task;
 
-   procedure Init_Partie is
-      Ajout_Case;
-      -- Print_Grill;
-   end Init_Partie;
-
-
 end Partie;

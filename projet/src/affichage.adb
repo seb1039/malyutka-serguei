@@ -1,12 +1,18 @@
 package body Affichage is
+   
+   procedure Init_Partie is
+      Grill_Reset;
+      Ajout_Case;
+      My_Score = 0;
+   end Init_Partie;
+   
       
    --Procédure a  appeler 
    procedure Coup_Joue(Dir : Direction) is
    begin
       Maj_Grille(Dir => Dir);
    end Coup_Joue;
-   
-   
+      
    --Sert a  la Mise a  jour du score
    procedure Maj_Score(Val : Valeur) is
    begin
@@ -159,5 +165,15 @@ package body Affichage is
          end if;
       end case;
    end Decalage;
+   
+   --Réinitialise la grille
+   procedure Grill_Reset is
+   begin
+      for Co in Coord loop
+         for Li in Coord loop
+            My_Grill(Co,Li).Val = 1;
+         end loop;
+      end loop;
+   end Grill_Reset;
    
 end Affichage;
