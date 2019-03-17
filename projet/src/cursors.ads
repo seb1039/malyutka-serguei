@@ -3,13 +3,13 @@ with Affichage; use Affichage;
 
 package Cursors is
    
-   Cursor : Cursor_T := Get_Cursor_Status;
+   procedure Update_Cursor;
+   function Cursor_Is_Pressed return Boolean;
+   function Get_Cursor_Direction return Direction;
    
-   type Swap_Cursor_T is record
-      Dir : Direction;
-      Is_Defined : Boolean;
-   end record;
+private
    
-   
+   Current_Cursor : Cursor_T;
+   function Get_Cursor_Position return Screen_Point;
    
 end Cursors;

@@ -20,6 +20,10 @@
 with Display;       use Display;
 with Display.Basic; use Display.Basic;
 with Ada.Real_Time; use Ada.Real_Time;
+with Affichage; use Affichage;
+with Cursors; use Cursors;
+with ButtonInit; use ButtonInit;
+with ButtonInit.InfinityLoop; use ButtonInit.InfinityLoop;
 --with Last_Chance_Handler; pragma Unreferenced (Last_Chance_Handler);
 
 procedure Main is
@@ -48,21 +52,23 @@ begin
 
    Next := Clock + Period;
 
+   --On initialise la partie
+   Init_Partie;
+
+   --Tant qu'on n'est pas mort, on joue
    while not Is_Killed loop
 
-      My_Cursor := Get_Cursor_Status;
-      if My_Cursor.Pressed then
+      -- Mise à jour du Curseur
+      Update_Cursor;
+      if Cursor_Is_Pressed then
 
-         Draw_Fill_Rect(Canvas   => Canvas,
-                        Position => (Float(My_Cursor.Position.X-100), Float(-(My_Cursor.Position.Y-150)),0.0),
-                        Width    => 50.0,
-                        Height   => 50.0,
-                        Color    => Yellow);
+         Swap_Buffers (Window);
+         Coup_Joue(Get_Cursor_Direction);
 
+         -- 1) Affichage de la grille
+         -- 2) Affichage du score
 
       end if;
-
-      Swap_Buffers (Window);
 
       delay until Next;
       Next := Next + Period;
