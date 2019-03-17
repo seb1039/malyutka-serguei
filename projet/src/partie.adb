@@ -14,6 +14,10 @@ package body Partie is
             --    i) Coup_Joue(Dir => Dir);
             --    ii) Print_Grill
             -- 3) Sinon null; -- et retour dans la boucle
+            if true then
+               null;
+            else
+            end if;
             null;
          end if;
       end loop;
