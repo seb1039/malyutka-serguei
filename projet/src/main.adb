@@ -24,6 +24,8 @@ with Affichage; use Affichage;
 with Cursors; use Cursors;
 with ButtonInit; use ButtonInit;
 with ButtonInit.InfinityLoop; use ButtonInit.InfinityLoop;
+with dmqh; use dmqh;
+
 --with Last_Chance_Handler; pragma Unreferenced (Last_Chance_Handler);
 
 procedure Main is
@@ -47,7 +49,7 @@ begin
      Create_Window
        (Width  => Integer (Width),
         Height => Integer (Height),
-        Name   => "Projet");
+        Name   => "Projet 2048");
    Canvas := Get_Canvas (Window);
 
    Next := Clock + Period;
@@ -67,6 +69,102 @@ begin
 
          -- 1) Affichage de la grille
          -- 2) Affichage du score
+
+         Init_Body
+           (B            => c11,
+            Cases        => My_Grill(1,1),
+            X            => -106.0,
+            Y            => -104.0);
+
+         Init_Body
+           (B            => c21,
+            Cases        => My_Grill(2,1),
+            X            => -53.0,
+            Y            => -104.0);
+
+         Init_Body
+           (B            => c31,
+            Cases        => My_Grill(3,1),
+            X            => 0.0,
+            Y            => -104.0);
+
+         Init_Body
+           (B            => c41,
+            Cases        => My_Grill(4,1),
+            X            => 53.0,
+            Y            => -104.0);
+
+         Init_Body
+           (B            => c12,
+            Cases        => My_Grill(1,2),
+            X            => -106.0,
+            Y            => -52.0);
+
+         Init_Body
+           (B            => c22,
+            Cases        => My_Grill(2,2),
+            X            => -53.0,
+            Y            => -52.0);
+
+         Init_Body
+           (B            => c32,
+            Cases        => My_Grill(3,2),
+            X            => 0.0,
+            Y            => -52.0);
+
+         Init_Body
+           (B            => c42,
+            Cases        => My_Grill(4,2),
+            X            => 53.0,
+            Y            => -52.0);
+
+         Init_Body
+           (B            => c13,
+            Cases        => My_Grill(1,3),
+            X            => -106.0,
+            Y            => 0.0);
+
+         Init_Body
+           (B            => c23,
+            Cases        => My_Grill(2,3),
+            X            => -53.0,
+            Y            => 0.0);
+
+         Init_Body
+           (B            => c33,
+            Cases        => My_Grill(3,3),
+            X            => 0.0,
+            Y            => 0.0);
+
+         Init_Body
+           (B            => c43,
+            Cases        => My_Grill(4,3),
+            X            => 53.0,
+            Y            => 0.0);
+
+         Init_Body
+           (B            => c14,
+            Cases        => My_Grill(1,4),
+            X            => -106.0,
+            Y            => 52.0);
+
+         Init_Body
+           (B            => c24,
+            Cases        => My_Grill(2,4),
+            X            => -53.0,
+            Y            => 52.0);
+
+         Init_Body
+           (B            => c34,
+            Cases        => My_Grill(3,4),
+            X            => 0.0,
+            Y            => 52.0);
+
+         Init_Body
+           (B            => c44,
+            Cases        => My_Grill(4,4),
+            X            => 53.0,
+            Y            => 52.0);
 
       end if;
 

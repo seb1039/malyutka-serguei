@@ -64,10 +64,10 @@ package Affichage is
    --Procédure a  appeler 
    procedure Coup_Joue(Dir : Direction);
    
-   --Sert a  l'ajout d'une case sur la grille
-   procedure Ajout_Case;
-   
 private
+   
+   --Sert a  l'ajout aléatoire d'une case sur la grille
+   procedure Ajout_Case;
    
    --Sert a  la Mise a  jour du score
    procedure Maj_Score(val : Valeur); 
